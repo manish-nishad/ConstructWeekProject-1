@@ -14,18 +14,34 @@
   margin-bottom: 50px;
 }
 h2 {
-  margin-left: 150px;
+  margin-left: 200px;
   margin-bottom: 50px;
   font-family: sans-serif;
 }
 .filters {
   display: grid;
   gap: 10px;
-  margin-left: 160px;
+  margin-left: 200px;
   font-family: sans-serif;
 }
-.filters > h4 {
+.filters > h5 {
   color: gray;
   margin-bottom: 20px;
+  margin-left: 10px;
 }
-
+#category,
+#sizes,
+#brand,
+#colors,
+#design,
+#fit,
+#sleeve,
+#neck,
+#ratings,
+#discount,
+#sort {
+  font-size: large;
+  border: transparent;
+  width: 170px;
+  height: 20px;
+}
