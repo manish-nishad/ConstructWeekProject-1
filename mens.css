@@ -13,18 +13,19 @@
   width: 100%;
   margin-bottom: 50px;
 }
-h2{
-    margin-left: 150px;
-    margin-bottom: 50px;
-    font-family: sans-serif;
+h2 {
+  margin-left: 150px;
+  margin-bottom: 50px;
+  font-family: sans-serif;
 }
-.filters{
-    display: grid;
-    gap: 10px;
-    margin-left: 160px;
-    font-family: sans-serif;
+.filters {
+  display: grid;
+  gap: 10px;
+  margin-left: 160px;
+  font-family: sans-serif;
 }
-.filters>h4{
-    color: gray;
-    margin-bottom: 20px;
+.filters > h4 {
+  color: gray;
+  margin-bottom: 20px;
 }
+
