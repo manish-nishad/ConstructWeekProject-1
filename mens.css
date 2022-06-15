@@ -45,3 +45,17 @@ h2 {
   width: 170px;
   height: 20px;
 }
+.mainbox{
+  border: 1px solid black;
+  width: 60%;
+  height: auto;
+  margin-left: 400px;
+  margin-top: -325px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.productbox{
+  border: 1px solid black;
+  height: 400px;
+} 
