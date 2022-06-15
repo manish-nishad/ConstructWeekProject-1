@@ -929,12 +929,15 @@ mensData.forEach((e) => {
     brand.textContent = e.brand;
     let brand_description = document.createElement("p");
     brand_description.textContent = e.brand_description;
-    let price = document.createElement("p");
+    brand_description.style.color = "grey"
+    let price = document.createElement("h3");
     price.textContent = e.price;
     let striked_off_price = document.createElement("p");
     striked_off_price.textContent = e.striked_off_price;
+    striked_off_price.style.textDecoration = "line-through"
     let member_price = document.createElement("p");
     member_price.textContent = e.member_price;
+    member_price.style.fontWeight = "bold"
     pbox.append(
         image,
         brand,
@@ -944,3 +947,8 @@ mensData.forEach((e) => {
         member_price
     );
 });
+
+document.querySelector("#category").addEventListener("click",showCategory);
+function showCategory(){
+    
+}
