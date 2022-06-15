@@ -14,14 +14,14 @@
   margin-bottom: 50px;
 }
 h2 {
-  margin-left: 200px;
+  margin-left: 160px;
   margin-bottom: 50px;
   font-family: sans-serif;
 }
 .filters {
   display: grid;
   gap: 10px;
-  margin-left: 200px;
+  margin-left: 160px;
   font-family: sans-serif;
 }
 .filters > h5 {
@@ -45,17 +45,21 @@ h2 {
   width: 170px;
   height: 20px;
 }
-.mainbox{
+.mainbox {
   border: 1px solid black;
   width: 60%;
   height: auto;
   margin-left: 400px;
-  margin-top: -325px;
+  /* margin-top: -325px; */
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.productbox{
+.productbox {
   border: 1px solid black;
-  height: 400px;
-} 
+  height: 500px;
+}
+.productbox > img {
+  height: 70%;
+  width: 100%;
+}
