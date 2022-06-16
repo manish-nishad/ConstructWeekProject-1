@@ -2,6 +2,8 @@ let product = document.createElement("div");
 document.querySelector("body").append(product);
 product.setAttribute("class", "mainbox");
 
+let mens_products = JSON.parse(localStorage.getItem("mensProducts")) || [];
+
 let mensData = [
     {
         image_url:
@@ -918,37 +920,71 @@ let mensData = [
     },
 ];
 
-mensData.forEach((e) => {
-    let pbox = document.createElement("div");
-    pbox.setAttribute("class", "productbox");
-    product.append(pbox);
-    let image = document.createElement("img");
-    image.setAttribute("src", e.image_url);
-    pbox.append(image);
-    let brand = document.createElement("p");
-    brand.textContent = e.brand;
-    let brand_description = document.createElement("p");
-    brand_description.textContent = e.brand_description;
-    brand_description.style.color = "grey"
-    let price = document.createElement("h3");
-    price.textContent = e.price;
-    let striked_off_price = document.createElement("p");
-    striked_off_price.textContent = e.striked_off_price;
-    striked_off_price.style.textDecoration = "line-through"
-    let member_price = document.createElement("p");
-    member_price.textContent = e.member_price;
-    member_price.style.fontWeight = "bold"
-    pbox.append(
-        image,
-        brand,
-        brand_description,
-        price,
-        striked_off_price,
-        member_price
-    );
-});
 
-document.querySelector("#category").addEventListener("click",showCategory);
-function showCategory(){
-    
+function displayProductdata(mensData) {
+    mensData.forEach((element) => {
+        let pbox = document.createElement("div");
+        pbox.setAttribute("class", "productbox");
+        product.append(pbox);
+        let image = document.createElement("img");
+        image.setAttribute("src", element.image_url);
+        pbox.append(image);
+        let brand = document.createElement("p");
+        brand.textContent = element.brand;
+        let brand_description = document.createElement("p");
+        brand_description.textContent = element.brand_description;
+        brand_description.style.color = "grey"
+        let price = document.createElement("h3");
+        price.textContent = element.price;
+        let striked_off_price = document.createElement("p");
+        striked_off_price.textContent = element.striked_off_price;
+        striked_off_price.style.textDecoration = "line-through"
+        let member_price = document.createElement("p");
+        member_price.textContent = element.member_price;
+        member_price.style.fontWeight = "bold"
+        pbox.append(
+            image,
+            brand,
+            brand_description,
+            price,
+            striked_off_price,
+            member_price
+        );
+    });
+    localStorage.setItem("mensProducts", JSON.stringify(mensData));
 }
+
+displayProductdata(mensData);
+
+document.querySelector("#category").addEventListener("change", catFilter)
+
+
+function catFilter() {
+    let selected_category = document.querySelector("#category").value;
+    let cat_filter = mens_products.filter(function (element) {
+        return element.category == selected_category;
+    });
+    console.log(cat_filter);
+}
+document.querySelector("#sizes").addEventListener("change", sizeFilter)
+function sizeFilter() {
+    let selected_size = document.querySelector("#sizes").value;
+    let size_filter = mens_products.filter(function (element) {
+        return element.sizes == selected_size;
+    });
+    console.log(size_filter)
+
+}
+document.querySelector("#brand").addEventListener("change", brandFilter);
+function brandFilter() {
+    let selected_brand = document.querySelector("#brand").value;
+    let brand_filter = mens_products.filter(function (element) {
+        return element.brand == selected_brand;
+    }); 
+    displayProductdata(brand_filter);
+}
+
+
+
+
+
