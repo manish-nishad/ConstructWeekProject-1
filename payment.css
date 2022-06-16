@@ -1,4 +1,5 @@
 
+
 body{
     font-family: "montserrat", sans-serif;
 }
@@ -8,6 +9,10 @@ body{
     width: 85%;
     margin: auto;
     height: 40px;
+}
+#payment-navbar-email{
+    font-size: 15px;
+    color: grey;
 }
 #payment-navbar>div:nth-child(2){
     line-height: 2px;
@@ -41,8 +46,7 @@ body{
     margin: auto;
     padding: 20px 15px;
     border: none;
-    border-bottom: 1px solid 
-    #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
     font-weight: bold;
     text-align: left;
 }
@@ -76,7 +80,8 @@ input{
     padding: 10px 5px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid gray
+    border:transparent;
+    border-bottom: 1px solid grey;
 }
 #payment-debit>input:nth-child(4){
     width: 40%;
@@ -99,6 +104,10 @@ align-items: center;
 #card-payment-div2>input{
     width: 10px;
 }
+#card-payment-para1{
+   font-size: 15px;
+   color: grey;
+}
 #payment-debit>p{
     padding: 0 10px;
     color: gray;
@@ -113,6 +122,14 @@ align-items: center;
     border: none;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+#card-checkbox{
+    width: 20px;
+    margin-left: 10px;
+}
+#upi{
+    font-size: 15px;
+    color: grey;
 }
 #payment-wallet{
     display: none;
@@ -230,7 +247,7 @@ width: 280px;
     margin-bottom: 10px;
 }
 #payment-cod-button>p:nth-child(1){
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     color: gray;
     font-size: 10px;
 }
@@ -240,7 +257,7 @@ width: 280px;
 }
 
 /* #payment-wallet>div>input{
-    border: 1px solid pink;
+    border: 0px solid pink;
 }
 #payment-wallet>div>div>img{
     height: 30px;
@@ -249,5 +266,4 @@ width: 280px;
 #right-payment-mode{
     border: 1px solid tomato;
     width: 100%;
-}
- */
+} */

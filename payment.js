@@ -6,7 +6,7 @@
     
 // We have to change debit card button again on clicking second time;
 
-    paymentWalletButton.addEventListener("click", ()=>{
+    paymentWalletButton.addEventListener("click", (){
         // left div changed
         paymentWalletButton.style.backgroundColor = "white";
         paymentWalletButton.style.borderLeft = "5px solid #42a2a2";
@@ -24,7 +24,7 @@
         document.getElementById("payment-net-banking").style.display = "none";
     });
 
-    paymentDebitButton.addEventListener("click", ()=>{
+    paymentDebitButton.addEventListener("click", (){
         paymentUpiButton.style.backgroundColor = "whitesmoke";
         paymentUpiButton.style.border = "none";
         paymentNetBankingButton.style.backgroundColor = "whitesmoke";
@@ -40,7 +40,7 @@
 
     })
 
-paymentUpiButton.addEventListener("click", ()=>{
+paymentUpiButton.addEventListener("click", (){
     paymentDebitButton.style.backgroundColor = "whitesmoke";
         paymentDebitButton.style.border = "none";
         paymentNetBankingButton.style.backgroundColor = "whitesmoke";
@@ -87,6 +87,6 @@ paymentUpiButton.addEventListener("click", ()=>{
 });
 
    
-</script> -->
+</script> 
 
 
