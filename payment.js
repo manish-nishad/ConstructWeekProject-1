@@ -1,4 +1,4 @@
-<script>
+
     var paymentDebitButton = document.getElementById("payment-debit-button");
     var paymentWalletButton = document.getElementById("payment-wallet-button");
     var paymentUpiButton = document.getElementById("payment-upi-button");
@@ -87,6 +87,6 @@ paymentUpiButton.addEventListener("click", (){
 });
 
    
-</script> 
+
 
 
