@@ -22,27 +22,57 @@
   </div>
   <hr />
   <div id="payment-price">
-    <h2>Payment</h2>
-    <h2>Price ₹<span id="payment-amount">1048</span></h2>
+    <h2>Choose Your Payment Method</h2>
+    <!-- <h2>Price ₹<span id="payment-amount"></span></h2> -->
   </div>
   <div id="payment-mode">
     <div id="left-payment-mode">
-      <button id="payment-debit-button">DEBIT/CREDIT CARD</button>
-      <button id="payment-wallet-button">WALLET</button>
-      <button id="payment-upi-button">UPI</button>
-      <button id="payment-net-banking-button">NET BANKING</button>
-      <button id="payment-cod-button">CASH ON DELIVERY
-        <!-- <p>Cash on Delivery is currently unavailable</p> -->
-      </button>
+      <button id="payment-debit-button">
+        <div>
+          <img src="https://images.bewakoof.com/web/bank-card-fill-1645697857.svg" alt="">
+          <P>DEBIT/CREDIT CARD</P>
+        </div>
+         </button>
+      <button id="payment-wallet-button">
+        <div>
+          <img src="https://images.bewakoof.com/web/Group-1645705428.png" alt="">
+          <p> WALLET</p>
+        </div>
+        </button>
+      <button id="payment-upi-button">
+        <div>
+          <img src="https://images.bewakoof.com/web/upi-icon-1645705429.png" alt="">
+          <p>UPI</p>
+        </div>
+         </button>
+      <button id="payment-net-banking-button">
+        <div>
+          <img src="https://images.bewakoof.com/web/nb-icon-1645705428.png" alt="">
+          <p>NET BANKING</p>
+        </div>
+         </button>
+      <button id="payment-cod-button">
+        <div>
+          <img src="https://images.bewakoof.com/web/cod-icon-1645705427.png" alt="">
+          <p>CASH ON DELIVERY</p>
+        </div>
+         </button>
+      <button id="payment-bnpl-button">
+        <div>
+          <img src="https://images.bewakoof.com/web/BNPL-icon-1645705427.png" alt="">
+          <p>BUY NOW PAY LATER</p>
+        </div>
+         </button>
     </div>
     <div id="right-payment-mode">
       <div id="payment-debit">
         <div>
-          <img src="https://images.bewakoof.com/web/Add-card-icon-1600332484.png" alt="" />
-          <p>Add New Card</p>
+          <img src="https://images.bewakoof.com/web/ic-visa-gray-payment-v1.jpg" alt="">
+          <img src="https://images.bewakoof.com/web/ic-master-card-payment-v1.jpg" alt="">
+          <img src="https://images.bewakoof.com/web/ic-rupay-payment-v1.jpg" alt="">
+          <img src="https://images.bewakoof.com/web/ic-american-express-payment-v1.jpg" alt="">
         </div>
         <input type="text" id="card-number" placeholder="Card Number" />
-        
         <input type="text" id="card-expiry" placeholder="Expiry (MM/YY)" />
         <input type="password" id="card-password" placeholder="CVV" />
         <input type="text" id="card-name" placeholder="Name on Card" />
@@ -86,15 +116,17 @@
       <div id="payment-upi">
         <div>
           <img src="https://images.bewakoof.com/web/upi-logo.png" alt="">
-          <p>Add UPI</p>
+          <img src="https://images.bewakoof.com/web/ic-gpay-payment-gray-v1.jpg" alt="">
+          <img src="https://images.bewakoof.com/web/ic-phone-pe-gray-payment-v1.jpg" alt="">
+          <img src="https://images.bewakoof.com/web/ic-more-option-payment-v1.jpg" alt="">
           <input type="radio">
         </div>
-        <input type="text" placeholder="Enter UPI ID">
+        <input type="text" placeholder="UPI ID">
         <p>UPI ID is in the format of 9999932832@bank or username@bank</p>
         <div>
 
           <input type="checkbox" id="card-checkbox" />
-         <label id="upi"> Save this UPI ID for future payments.</label>
+         <label id="upi">Save this UPI ID for future payments.</label>
 
 
         </div>
@@ -126,13 +158,24 @@
           <p>Kotak</p>
           <input type="radio">
         </div>
-        <div>
-          <img src="https://images.bewakoof.com/web/other-bank-icon-1600258256.png" alt="">
-          <p>Others</p>
-          <button id="payment-net-other-arrow">∟</button>
-        </div>
-        <p>You will be redirected to the banks website to complete the payment process.</p>
+        <p>Other Banks</p>
       </div>
+      
+      </div>
+      <div id="payment-cod">
+        <div>
+         <p>Cash Collection Charges:Costs ₹ 30 Extra</p>
+        </div>
+        <button>PAY NOW</button>
+       </div>
+       <div id="payment-bnpl">
+        <div>
+          <img src="https://images.bewakoof.com/web/image-1626434254.png" alt="">
+          <p>Simpl</p>
+          <input type="radio">
+        </div>
+        <p>Pay Later with Simpl</p>
+       </div>
     </div>
   </div>
   </div>
@@ -140,4 +183,3 @@
 
 </html>
 <script src="payment.js"></script>
-
