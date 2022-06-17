@@ -906,12 +906,100 @@ let mensData = [
         member_price: "₹1019 for TriBe Members",
     },
     {
-        image_url: "https://images.bewakoof.com/t320/blue-quartz-illuminating-burnt-orange-color-block-sweatshirt-aw-21-364991-1638511238-1.jpg",
-        brand: "Bewakoof",
-        brand_description: "Sweatshirt",
-        price: "₹699",
-        striked_off_price: "₹1599",
-        member_price: "₹649 for TriBe Members",
+        image_url: "https://images.bewakoof.com/t540/men-s-grey-think-big-typography-slim-fit-t-shirt-500628-1653036948-1.jpg",
+        brand: "Alics",
+        brand_description: "SweatshirtMen's Grey Think Big Typography Slim Fit T-shirt",
+        price: "₹540",
+        striked_off_price: "₹899",
+        member_price: "₹519 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t320/men-s-blue-black-color-block-slim-fit-t-shirt-500649-1653036655-1.jpg",
+        brand: "Alics",
+        brand_description: "Men's Blue & Black Color Block Slim Fit T-shirt",
+        price: "₹600",
+        striked_off_price: "₹999",
+        member_price: "₹579 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t320/men-s-blue-perspective-graphic-printed-slim-fit-t-shirt-500654-1653037476-1.jpg",
+        brand: "Alics",
+        brand_description: "Men's Blue Perspective Graphic Printed Slim Fit T-shirt",
+        price: "₹600",
+        striked_off_price: "₹999",
+        member_price: "₹579 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t320/men-s-black-abstract-printed-slim-fit-t-shirt-500903-1653037035-1.jpg",
+        brand: "Alics",
+        brand_description: "Men's Black Abstract Printed Slim Fit T-shirt",
+        price: "₹780",
+        striked_off_price: "₹1299",
+        member_price: "₹759 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t320/men-s-white-color-block-slim-fit-t-shirt-501045-1653059650-1.jpeg",
+        brand: "Alics",
+        brand_description: "Men's White Color Block Slim Fit T-shirt",
+        price: "₹650",
+        striked_off_price: "₹1299",
+        member_price: "₹629 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t320/men-s-pink-slim-fit-t-shirt-485899-1649068884-1.jpg",
+        brand: "Alics",
+        brand_description: "Men's Pink Slim Fit T-shirt",
+        price: "₹550",
+        striked_off_price: "₹999",
+        member_price: "₹529 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t540/campus-sutra-men-s-multicolor-striped-shirt14-451499-1637613437-1.jpg",
+        brand: "Campus Sutra",
+        brand_description: "Men's Blue & White Striped Regular Fit Shirt",
+        price: "₹854",
+        striked_off_price: "₹1499",
+        member_price: "₹809 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t540/men-s-blue-cotton-polo-t-shirt-493355-1650913136-1.JPG",
+        brand: "Campus Sutra",
+        brand_description: "Men's Blue Cotton Polo T-shirt",
+        price: "₹854",
+        striked_off_price: "₹1499",
+        member_price: "₹809 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t540/campus-sutra-solid-men-polo-neck-green-sports-t-shirtss21-csm-aw-al0689-gre-t-shirt-381116-1626707817.jpg",
+        brand: "Campus Sutra",
+        brand_description: "Men's Solid Polo Neck Green Sports T-Shirt",
+        price: "₹554",
+        striked_off_price: "₹999",
+        member_price: "₹529 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t540/campus-sutra-solid-men-henley-green-t-shirt-t-shirt-366378-1623083365.jpg",
+        brand: "Campus Sutra",
+        brand_description: "Solid Men's Henley Green T-Shirt",
+        price: "₹494",
+        striked_off_price: "₹899",
+        member_price: "₹469 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t540/campus-sutra-men-stylish-casual-t-shirt-campus-sutra-men-s-t-shirts-with-mandarin-collar-343514-1616167657.jpg",
+        brand: "Campus Sutra",
+        brand_description: "Men's Stylish Casual T-Shirt",
+        price: "₹494",
+        striked_off_price: "₹899",
+        member_price: "₹469 for TriBe Members",
+    },
+    {
+        image_url: "https://images.bewakoof.com/t540/men-s-pink-cotton-polo-t-shirt-493333-1650913185-1.JPG",
+        brand: "Campus Sutra",
+        brand_description: "Men's Pink Cotton Polo T-shirt",
+        price: "₹854",
+        striked_off_price: "₹1499",
+        member_price: "₹809 for TriBe Members",
     },
 ];
 let contentbox = document.querySelector(".products");
@@ -934,14 +1022,18 @@ function displayProd(mensData) {
         let brand_description = document.createElement("p");
         brand_description.textContent = element.brand_description;
         brand_description.style.color = "grey"
+        brand_description.style.fontSize = "smaller"
         let price = document.createElement("h3");
         price.textContent = element.price;
+        price.style.fontWeight = "lighter";
+        price.style.fontSize = "medium"
         let striked_off_price = document.createElement("p");
         striked_off_price.textContent = element.striked_off_price;
         striked_off_price.style.textDecoration = "line-through"
         let member_price = document.createElement("p");
         member_price.textContent = element.member_price;
         member_price.style.fontWeight = "bold"
+        member_price.style.fontSize = "smaller"
         box.append(image, brand, brand_description, price, striked_off_price, member_price);
         box.addEventListener("click",function(){
             redirectToProduct(element)
@@ -949,6 +1041,7 @@ function displayProd(mensData) {
         function redirectToProduct(element){
             localStorage.setItem("item",JSON.stringify(element))
             window.location.href="mensproductpage.html"
+            
         }
         // console.log(mensDataFromLS.length);
     });
