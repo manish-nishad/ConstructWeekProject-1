@@ -3,12 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
 }
-.address > p {
-  margin-left: 20px;
-  font-family: sans-serif;
-  color: grey;
-  display: inline;
-}
 .banner > img {
   width: 100%;
   margin-bottom: 50px;
@@ -18,83 +12,46 @@ h2 {
   margin-bottom: 50px;
   font-family: sans-serif;
 }
-.filters {
-  border: 1px solid yellow;
-  display: grid;
-  gap: 10px;
-  margin-left: 160px;
-  font-family: sans-serif;
-  width: 300px;
-  height: 500px;
-
-}
-.filters > h5 {
-  border: 2px solid yellow;
-  color: gray;
-  margin-bottom: 20px;
-  margin-left: 10px;
+.filterhead{
+  border: 1px solid black;
+  margin-left: 180px;
   width: 100px;
-}
-#category {
-  border: transparent;
-  width: 200px;
-}
-#sizes {
-  border: transparent;
-  width: 225px;
-}
-#brand {
-  border: transparent;
-  width: 222px;
-}
-#color {
-  border: transparent;
-  width: 225px;
-}
-#design {
-  border: transparent;
-  width: 214px;
-}
-#fit {
-  border: transparent;
-  width: 245px;
-}
-#sleeve {
-  border: transparent;
-  width: 215px;
-}
-#neck {
-  border: transparent;
-  width: 227px;
-}
-#ratings {
-  border: transparent;
-  width: 209px;
-}
-#discount {
-  border: transparent;
-  width: 201px;
-}
-#sort {
-  border: transparent;
-  width: 212px;
-}
-.mainbox {
-  width: 56%;
-  height: auto;
-  margin-left: 500px;
-  margin-top: -500px;
-  font-family: sans-serif;
-  font-size: small;
-  /* margin-top: -325px; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+}
+.content{
+  display: flex;
+  width: 98%;
+  border: 1px solid yellow;
+  margin: auto;
+}
+.filters>div{
+  border: 1px solid red;
+  width: 280px;
+  height: auto;
+  margin: 50px 0 0 165px;
+}
+#category,#sizes,#brand,#color,#design,#fit,#sleeve,#neck,#ratings,#discount,#sort{
+  width: 100%;
+  height: 35px;
+  border: transparent;
+  margin: auto;
+  font-family:sans-serif ;
+  font-size: medium;
+}
+.products{
+  border: 1px solid green;
+  width: 55%;
+  height: auto;
+  margin: 0 0 0 50px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   gap: 15px;
 }
-.productbox {
-  height: 500px;
+.productbox{
+  border: 1px solid greenyellow;
+  height: auto;
 }
-.productbox > img {
-  height: 70%;
+.productbox>img{
   width: 100%;
+  height: 350px;
 }

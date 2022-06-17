@@ -1,8 +1,3 @@
-let product = document.createElement("div");
-document.querySelector("body").append(product);
-product.setAttribute("class", "mainbox");
-
-let mens_products = JSON.parse(localStorage.getItem("mensProducts")) || [];
 
 let mensData = [
     {
@@ -919,16 +914,21 @@ let mensData = [
         member_price: "₹649 for TriBe Members",
     },
 ];
+let contentbox = document.querySelector(".products");
+// let mensDataFromLS = JSON.parse(localStorage.getItem("MensPorducts")) || []
+// console.log(mensDataFromLS);
 
+function displayProd(mensData) {
+    contentbox.innerHTML = "";
+    
+    mensData.forEach(function (element) {
 
-function displayProductdata(mensData) {
-    mensData.forEach((element) => {
-        let pbox = document.createElement("div");
-        pbox.setAttribute("class", "productbox");
-        product.append(pbox);
+        let box = document.createElement("div");
+        box.setAttribute("class", "productbox");
+        contentbox.append(box);
         let image = document.createElement("img");
         image.setAttribute("src", element.image_url);
-        pbox.append(image);
+        box.append(image);
         let brand = document.createElement("p");
         brand.textContent = element.brand;
         let brand_description = document.createElement("p");
@@ -942,49 +942,141 @@ function displayProductdata(mensData) {
         let member_price = document.createElement("p");
         member_price.textContent = element.member_price;
         member_price.style.fontWeight = "bold"
-        pbox.append(
-            image,
-            brand,
-            brand_description,
-            price,
-            striked_off_price,
-            member_price
-        );
+        box.append(image, brand, brand_description, price, striked_off_price, member_price);
+        box.addEventListener("click",function(){
+            redirectToProduct(element)
+        })
+        function redirectToProduct(element){
+            localStorage.setItem("item",JSON.stringify(element))
+            window.location.href="mensproductpage.html"
+        }
+        // console.log(mensDataFromLS.length);
     });
-    localStorage.setItem("mensProducts", JSON.stringify(mensData));
+    localStorage.setItem("MensPorducts", JSON.stringify(mensData));
 }
 
-displayProductdata(mensData);
+displayProd(mensData);
 
-document.querySelector("#category").addEventListener("change", catFilter)
+// filtering
 
 
+let cat = document.querySelector("#category");
+cat.addEventListener("change", catFilter)
 function catFilter() {
-    let selected_category = document.querySelector("#category").value;
-    let cat_filter = mens_products.filter(function (element) {
-        return element.category == selected_category;
+    let select_category = cat.value;
+    let cat_filter = mensData.filter(function (element) {
+        return element.brand_description === select_category;
     });
-    console.log(cat_filter);
+    displayProd(cat_filter);
 }
-document.querySelector("#sizes").addEventListener("change", sizeFilter)
+
+let sze = document.querySelector("#sizes");
+sze.addEventListener("change", sizeFilter)
 function sizeFilter() {
-    let selected_size = document.querySelector("#sizes").value;
-    let size_filter = mens_products.filter(function (element) {
-        return element.sizes == selected_size;
-    });
-    console.log(size_filter)
-
+    let select_size = sze.value;
+    let size_filter = mensData.filter(function (element) {
+        return element.size === select_size;
+    }); displayProd(size_filter);
 }
-document.querySelector("#brand").addEventListener("change", brandFilter);
+
+
+let bnd = document.querySelector("#brand")
+bnd.addEventListener("change", brandFilter)
 function brandFilter() {
-    let selected_brand = document.querySelector("#brand").value;
-    let brand_filter = mens_products.filter(function (element) {
-        return element.brand == selected_brand;
-    }); 
-    displayProductdata(brand_filter);
+    let brand_filter = mensData.filter(function (element) {
+        return element.brand === bnd.value;
+    }); displayProd(brand_filter);
 }
 
+let col = document.querySelector("#color")
+col.addEventListener("change", colorFilter);
+function colorFilter() {
+    let color_filter = mensData.filter(function (element) {
+        return element.color === col.value;
+    }); displayProd(color_filter);
+}
 
+let dgn = document.querySelector("#design")
+dgn.addEventListener("change", designFilter);
+function designFilter() {
+    let design_filter = mensData.filter(function (element) {
+        return element.design === dgn.value;
+    }); displayProd(design_filter);
+}
 
+let ft = document.querySelector("#fit")
+ft.addEventListener("change", fitFilter)
+function fitFilter() {
+    let fit_filter = mensData.filter(function (element) {
+        return element.fit === ft.value;
+    }); displayProd(fit_filter);
+}
 
+let slev = document.querySelector("#sleeve")
+slev.addEventListener("#change", sleeveFilter)
+function sleeveFilter() {
+    let sleeve_filter = mensData.filter(function (element) {
+        return element.sleeve === slev.value;
+    }); displayProd(sleeve_filter);
+}
 
+let nck = document.querySelector("#neck");
+nck.addEventListener("#change", neckFilter)
+function neckFilter() {
+    let neck_filter = mensData.filter(function (element) {
+        return element.neck === nck.value;
+    }); displayProd(neck_filter);
+}
+
+let rtng = document.querySelector("#ratings")
+rtng.addEventListener("#change", ratingsFilter)
+function ratingsFilter() {
+    let ratings_filter = mensData.filter(function (element) {
+        return element.ratings === rtng.value;
+    }); displayProd(ratings_filter);
+}
+
+let dsc = document.querySelector("#sleeve")
+slev.addEventListener("#changa", sleeveFilter)
+function sleeveFilter() {
+    let sleeve_filter = mensData.filter(function (element) {
+        return element.sleeve === slev.value;
+    }); displayProd(sleeve_filter);
+}
+
+document.querySelector("#sort").addEventListener("change",sortProducts);
+function sortProducts() {
+    let selected = document.querySelector("#sort").value;
+    if (selected == "Popular") {
+        mensData.sort(function (a, b) {
+            if (a.brand > b.brand) return 1
+            if (a.brand < b.brand) return -1
+            return 0
+        })
+        displayProd(mensData);
+    }
+    if (selected == "New") {
+        mensData.sort(function (a, b) {
+            if (a.brand_description > b.brand_description) return 1;
+            if (a.brand_description < b.brand_description) return -1
+            return 0
+        })
+        displayProd(mensData);
+    }
+    if (selected == "Price : High to Low") {
+        mensData.sort(function (a, b) {
+            if (a.price > b.price) return 1
+            if (a.price < b.price) return -1
+            return 0
+        })
+        displayProd(mensData);
+    }
+    if (selected == "Price : Low to High") {
+        mensData.sort(function (a, b) {
+            if (a.price > b.price) return -1
+            if (a.price < b.price) return 1
+            return 0
+        })
+        displayProd(mensData);
+    }
+}
