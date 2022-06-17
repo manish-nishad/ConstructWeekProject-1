@@ -1173,3 +1173,7 @@ function sortProducts() {
         displayProd(mensData);
     }
 }
+
+    let prod_count = mensData.length;
+document.querySelector("h2").textContent = "Men Clothing"+" "+"("+`${prod_count}`+")";
+
