@@ -1,235 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessories</title>
+    <title>ACCESSORIES</title>
     <style>
-        body{
-            margin: 0;
-            font-family: montserrat,sans-serif;
+        #banner0 {
+            /* border: 1px solid red; */
+            width: 100%;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+
         }
-      #banner0{
-      display: flex;
-      }
-      #banner0>img{
-        margin-right: 20px;
-      }
-      #main-offers{
-         display: flex;
-      }
-      #main-offers>div>img{
-        width: 80%;
-      }
-      #main-banner{
-        border: 1px solid red;
-        display: flex;
-      }
-      #main-banner>div{
-         /* width: 80%; */
-         border: 1px solid red;
-      }
-      #main-categories{
-        display: flex;
-      }
-      #main-categories>div{
-        width: 95%;
-      }
-      #main-categories>div>img{
-        width: 85%;
+
+        #banner0>img {
+            width: 100%;
+        }
+
+        #main-offers {
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: auto;
+        }
 
 
-      }
-      #daba{
-        display: flex;
-        margin-top: 10px;
-      }
-      #daba>div{
-        margin-right: 10px;
-      }
+        #main-offers>div>img {
+            width: 100%;
+            height: 70%;
+            border-radius: 7px;
+        }
+
+        #main-offers>div>p {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #TRENDING {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto;
+        }
+
+        /* #TRENDING>div{
+
+        } */
+        #TRENDING>div>img {
+            width: 100%;
+            height: 77%;
+            /* border-radius: 7px; */
+        }
+
+        #TRENDING>div>p {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        span {
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        #POPULAR_CATEGORIES {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto;
+        }
+
+        #POPULAR_CATEGORIES>div>img {
+            width: 100%;
+            height: 77%;
+            /* border-radius: 7px; */
+        }
+
+        #dabba {
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+        }
+
+        #dabba>div>img {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 7px; */
+        }
+
+        #GANGS_FAV {
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+
+        #GANGS_FAV>div>img {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 7px; */
+        }
+
+        #whats_new {
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto;
+        }
+
+        #whats_new>div>img {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 7px; */
+        }
+
+
+        /* .slider {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        } */
     </style>
 </head>
-<body>
-    <div id="banner0">
-        <img src="https://images.bewakoof.com/uploads/grid/app/OOFsale-Homepage-Static-1X1-common-ENDS48HRS-02-1655230715.gif" alt="">
-        <img src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-Mobile-Covers-1654586526.jpg" alt="">
-        <img src="https://images.bewakoof.com/uploads/grid/app/1x1Banner-static-shoes-1651235308.gif" alt="error">
-        <img src="https://images.bewakoof.com/uploads/grid/app/ezgif-com-gif-maker--1--1651324109.gif" alt="">
-     </div>
-         <!-- Carousel 1 -->
-         <div id="slider1">
-            <div id="slider1_img1">
 
-            </div>
-            <div id="slider1_img2">
 
-            </div>
-            <div id="slider1_img3">
 
-            </div>
-        </div>
-        
-            <div class="popup" id="popup-1" >
-                <div class="overlay"></div>
-                <div class="spinner">
 
-                </div>
-            </div>
-        <!-- offers-bestseller -->
-        <div id="main-offers">
-            <div>
-                <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-best-sellers-1653387856.jpg"
-                    alt="">
-                    <p>BestSeller</p>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-new-arrival-Acc-1653048927.jpg" alt="">
-                    <p>New Arrival</p>
-            <div>
-                <img src="https://images.bewakoof.com/uploads/grid/app/merch-store-thumbnail-1650381435.jpg"
-                    alt="">
-                    <p>The Official Merch store</p>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-mobile-covers-1653388044.jpg" alt="">
-                    <p>Mobile covers</p>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-sliders-1653387857.jpg" alt="">
-                    <p>Phone grippers</p>
-            </div>
-            <div>
-              <img src="https://images.bewakoof.com/uploads/grid/app/PersonalCare-Thumbnail-1647932750.jpg" alt="">
-              <p>sliders</p>
-            </div>
-            <div>
-              <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-mugs-1653388044.jpg" alt="">
-              <p>Mugs</p>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/uploads/grid/app/CUSTOMISE-thumbnail-1644818150.jpg" alt="">
-                <p>Customization</p>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-essentials-1637307130.jpg" alt="">
-                    <p>Essentials</p>
-            </div>
-        </div>
-        <!-- main-banner -->
-        <h2 id="main-banner">TRENDING</h2>
-        <div>
-                <img src="https://images.bewakoof.com/t320/army-camouflage-lightweight-adjustable-strap-men-slider-333613-1640354768-1.jpg"
-                 alt="">
-                 <h4>₹ 499<span>₹1099</span></h4>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/t320/mr-men-s-lightweight-adjustable-strap-men-slider-352239-1638213179-1.jpg"
-                 alt="">
-                 <h4>₹ 249<span>₹1099</span></h4>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/t320/marvel-color-lightweight-adjustable-strap-men-s-slider-361096-1641198605-1.jpg" 
-                alt="">
-                <h4>₹ 599<span>₹1299</span></h4>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/t320/my-life-rules-lightweight-adjustable-strap-men-slider-333621-1641198717-1.jpg" 
-                alt="">
-                <h4>₹ 299<span>₹1099</span></h4>
-            </div>
+<div id="banner0">
+    <img src="https://images.bewakoof.com/uploads/grid/app/OOFsale-Homepage-Static-1X1-common-ENDS48HRS-02-1655230715.gif"
+        alt="">
+    <img src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-Mobile-Covers-1654586526.jpg" alt="">
+    <img src="https://images.bewakoof.com/uploads/grid/app/1x1Banner-static-shoes-1651235308.gif" alt="error">
+    <img src="https://images.bewakoof.com/uploads/grid/app/ezgif-com-gif-maker--1--1651324109.gif" alt="">
+</div>
+<div id="main-offers">
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-best-sellers-1653387856.jpg" alt="">
+        <p>BestSeller</p>
+    </div>
+    <div> <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-new-arrival-Acc-1653048927.jpg" alt="">
+        <p>New Arrival</p>
+    </div>
 
-            <div>
-                <img src="https://images.bewakoof.com/t320/spidey-lightweight-adjustable-strap-men-slider-ffhl-333645-1641198689-1.jpg" 
-                alt="">
-                <h4>₹ 599<span>₹1099</span></h4>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/t320/neon-diagonal-lightweight-adjustable-strap-mens-slider-295733-1638711561-1.jpg" 
-                alt="">
-                <h4>₹ 275<span>₹799</span></h4>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/t320/jet-black-lightweight-women-s-slider-271398-1635869800-1.jpg"
-                    alt="">
-                    <h4>₹ 449<span>₹499</span></h4>
-            </div>
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/merch-store-thumbnail-1650381435.jpg" alt="">
+        <p>The Official Merch store</p>
+    </div>
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-mobile-covers-1653388044.jpg" alt="">
+        <p>Mobile covers</p>
+    </div>
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-sliders-1653387857.jpg" alt="">
+        <p>Phone grippers</p>
+    </div>
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/PersonalCare-Thumbnail-1647932750.jpg" alt="">
+        <p>sliders</p>
+    </div>
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/thumbnails-mugs-1653388044.jpg" alt="">
+        <p>Mugs</p>
+    </div>
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/CUSTOMISE-thumbnail-1644818150.jpg" alt="">
+        <p>Customization</p>
+    </div>
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/tod-thumbnail-essentials-1637307130.jpg" alt="">
+        <p>Essentials</p>
+    </div>
 
-            <div>
-                <img src="https://images.bewakoof.com/t320/ride-with-pride-notebooks-soft-bound-notebook-367169-1626875329.jpg"
-                    alt="">
-                    <h4>₹ 71<span>₹399</span></h4>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/t320/gamers-printed-lightweight-adjustable-strap-men-slider-324768-1641198884-1.jpg"
-                    alt="">
-                    <h4>₹ 499<span>₹799</span></h4>
-            </div>
-            <div>
-                <img src="https://images.bewakoof.com/t320/gamers-printed-lightweight-adjustable-strap-men-slider-324768-1641198884-1.jpg"
-                    alt="">
-                    <h4>₹ 299<span>₹1099</span></h4>
-                    <a href="">VIEW ALL</a>
-                    
-                    <h2>POPULAR CATEGORIES</h2>
-                    <div id="main-categories">
+</div>
+<h2>TRENDING</h2>
+<div id="TRENDING">
+    <div><img
+            src="https://images.bewakoof.com/t540/my-life-rules-lightweight-adjustable-strap-men-slider-333621-1641198717-1.jpg"
+            alt="">
+        <p>₹499<span>₹1099</span></p>
+    </div>
 
-                   <div>
-                   <img src="https://images.bewakoof.com/uploads/grid/app/categories-to-bag-boxes-size-1c-1654678208.png"
-                   alt="">
-                   </div>
-                   <div>
-                  <img src="https://images.bewakoof.com/uploads/grid/app/slider-box-1654677089.png"
-                   alt="">
-                  </div>
-                 <div>
-                  <img src="https://images.bewakoof.com/uploads/grid/app/categories-to-bag-boxes-size-1p-1654678209.png" 
-                  alt="">
-                  </div>
-                  <div>
-                  <img src="https://images.bewakoof.com/uploads/grid/app/flipflop-box-1654677086.png" 
-                  alt="">
-                  </div>
-  
-                  <div>
-                  <img src="https://images.bewakoof.com/uploads/grid/app/notebook-box-1654677088.png" 
-                  alt="">
-                  </div>
-                  <div>
-                  <img src="https://images.bewakoof.com/uploads/grid/app/categories-to-bag-boxes-size-1o-1654678209.png" 
-                  alt="">
-                  </div>
-                  </div>
-                  <div id="daba">
-                    <div>
-                        <img src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-New-Arrivals-Accessories--1--1652689573.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="https://images.bewakoof.com/uploads/grid/app/1x1Banner-static-Backpack-low-1646747551.gif" alt="">
-                    </div>
-                    <div>
-                        <img src="https://images.bewakoof.com/uploads/grid/app/1x1-monsoon-ready-women-1654785496.gif" alt="">
-                    </div>
-                 </div>
-                  <h3 class="main-h3">THE GANG`S FAVOURITE</h3>
-                  <div id="daba1">
-                      <img src="https://images.bewakoof.com/uploads/grid/app/Mid-Size-Banner-Bags-1645250698.jpg" alt="">
-                      <img src="https://images.bewakoof.com/uploads/grid/app/Mid-Size-Banner-Zig-Zag-Sliders--1--1651237690.jpg" alt="">
-                  </div>
-                  <h3 class="main-h4">WHAT`S NEW</h3>
-                  <div>
-                    <img src="https://images.bewakoof.com/t320/afrojack-men-s-blue-sliders-505819-1654185101-1.JPG" alt="">
-                    <img src="https://images.bewakoof.com/t320/pink-stay-classy-adjustable-velcro-women-s-slider-497506-1653980731-1.jpg" alt="">
-                    <img src="https://images.bewakoof.com/t320/afrojack-men-s-black-white-color-block-sneakers-505774-1654185281-1.JPG" alt="">
-                    <img src="https://images.bewakoof.com/t320/afrojack-men-s-black-sliders-505766-1654184882-1.JPG" alt="">
-                    <img src="https://images.bewakoof.com/t320/load-game-adjustable-strap-women-slider-373621-1653975163-1.jpg" alt="">
-                    <img src="https://images.bewakoof.com/t320/afrojack-men-s-white-blue-color-block-sneakers-505771-1654185378-1.JPG" alt="">
-                    <img src="https://images.bewakoof.com/t320/afrojack-men-s-black-self-design-sneakers-505757-1654184979-1.JPG" alt="">
-                    <img src="https://images.bewakoof.com/t320/panda-abcd-adjustable-velcro-women-s-slider-497509-1654006986-1.jpg" alt="">
-                    <img src="https://images.bewakoof.com/t320/afrojack-men-s-black-high-top-boots-505759-1654185208-1.JPG" alt="">
-                    <img src="https://images.bewakoof.com/t320/men-s-black-panda-abcd-typography-adjustable-velcro-slider-497508-1654007014-1.jpg" alt="">
-                    <a href="">VIEW ALL</a>
-                  </div>
-        </div>
+    <div><img
+            src="https://images.bewakoof.com/t320/don-t-follow-me-lightweight-adjustable-strap-womens-slider-361112-1634717870-3.jpg"
+            alt="">
+        <p>₹449<span>₹1299</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t540/electric-marvel-lightweight-adjustable-strap-men-slider-men-s-printed-velcro-sliders-lightweight-352259-1626843155.jpg"
+            alt="">
+        <p>₹499<span>₹999</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/surf-dinosaur-lightweight-adjustable-strap-women-slider-330389-1640354603-1.jpg"
+            alt="">
+        <p>₹299<span>₹1099</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/melting-deadpool-lightweight-adjustable-strap-men-s-slider-dpl-352228-1640357878-1.jpg"
+            alt="">
+        <p>₹699<span>₹1099</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/don-t-follow-me-lightweight-adjustable-strap-womens-slider-361112-1634717858-1.jpg"
+            alt="">
+        <p>₹229<span>₹999</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/neon-diagonal-lightweight-adjustable-strap-mens-slider-295733-1638711561-1.jpg"
+            alt="">
+        <p>₹275<span>₹799</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/last-benchers-printed-small-backpack-black-237470-1644581818-1.jpg"
+            alt="">
+        <p>₹349<span>₹499</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/spidey-lightweight-adjustable-strap-men-slider-ffhl-333645-1641198703-5.jpg"
+            alt="">
+        <p>₹599<span>₹1099</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/ride-with-pride-notebooks-soft-bound-notebook-367169-1626875329.jpg"
+            alt="">
+        <p>₹71<span>₹399</span></p>
+    </div>
+
+</div>
+
+<h2>POPULAR CATEGORIES</h2>
+<div id="POPULAR_CATEGORIES">
+    <div><img src="https://images.bewakoof.com/uploads/grid/app/categories-to-bag-boxes-size-1c-1654678208.png" alt="">
+    </div>
+
+    <div><img src="https://images.bewakoof.com/uploads/grid/app/slider-box-1654677089.png" alt="">
+    </div>
+
+    <div><img src="https://images.bewakoof.com/uploads/grid/app/categories-to-bag-boxes-size-1p-1654678209.png" alt="">
+    </div>
+
+    <div><img src="https://images.bewakoof.com/uploads/grid/app/flipflop-box-1654677086.png" alt="">
+    </div>
+
+    <div><img src="https://images.bewakoof.com/uploads/grid/app/notebook-box-1654677088.png" alt="">
+    </div>
+
+    <div><img src="https://images.bewakoof.com/uploads/grid/app/categories-to-bag-boxes-size-1o-1654678209.png" alt="">
+    </div>
+
+</div>
+
+<div id="dabba">
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/Static-Banner-1-1-New-Arrivals-Accessories--1--1652689573.jpg"
+            alt="">
+    </div>
+
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/1x1Banner-static-Backpack-low-1646747551.gif" alt="">
+    </div>
+
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/1x1-monsoon-ready-women-1654785496.gif" alt="">
+    </div>
+</div>
+
+<h2>THE GANG'S FAVOURITE</h2>
+<div id="GANGS_FAV">
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/Mid-Size-Banner-Bags-1645250698.jpg" alt="">
+    </div>
+
+    <div>
+        <img src="https://images.bewakoof.com/uploads/grid/app/Mid-Size-Banner-Zig-Zag-Sliders--1--1651237690.jpg"
+            alt="">
+    </div>
+</div>
+
+<h2>WHAT'S NEW</h2>
+<div id="whats_new">
+    <div><img src="https://images.bewakoof.com/t320/jet-black-adjustable-velcro-men-s-slider-481910-1653027309-1.jpg"
+            alt="">
+        <p>₹499<span>₹1099</span></p>
+    </div>
+
+    <div><img src="https://images.bewakoof.com/t320/afrojack-men-s-black-sneakers-505754-1654184951-1.jpg" alt="">
+        <p>₹599<span>₹2999</span></p>
+    </div>
+
+    <div><img src="https://images.bewakoof.com/t320/afrojack-men-s-black-high-top-boots-505759-1654185208-1.JPG" alt="">
+        <p>₹799<span>₹3995</span></p>
+    </div>
+
+    <div><img src="https://images.bewakoof.com/t320/afrojack-men-s-black-self-design-sneakers-505757-1654184979-1.JPG"
+            alt="">
+        <p>₹799<span>₹3995</span></p>
+    </div>
+
+    <div><img src="https://images.bewakoof.com/t320/afrojack-men-s-grey-sliders-505817-1654185426-1.JPG" alt="">
+        <p>₹1409<span>₹1299</span></p>
+    </div>
+
+    <div><img src="https://images.bewakoof.com/t320/men-s-olive-premium-casual-shoes-509654-1655123179-1.JPG" alt="">
+        <p>₹499<span>₹1099</span></p>
+    </div>
+
+    <div><img src="https://images.bewakoof.com/t320/men-s-white-lace-ups-sneakers-499234-1652707677-1.jpg" alt="">
+        <p>₹499<span>₹2495</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/afrojack-men-s-white-blue-color-block-sneakers-505771-1654185378-1.JPG"
+            alt="">
+        <p>₹749<span>₹2499</span></p>
+    </div>
+
+    <div><img
+            src="https://images.bewakoof.com/t320/men-s-black-panda-abcd-typography-adjustable-velcro-slider-497508-1654007014-1.jpg"
+            alt="">
+        <p>₹599<span>₹2999</span></p>
+    </div>
+
+    <div><img src="https://images.bewakoof.com/t320/men-s-black-white-color-block-sports-shoes-499227-1652707756-1.jpg"
+            alt="">
+        <p>₹699<span>₹999</span></p>
+    </div>
+
+</div>
+
 </body>
+
 </html>
