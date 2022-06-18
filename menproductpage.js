@@ -3,7 +3,7 @@ let product = JSON.parse(localStorage.getItem("item"));
 console.log(product);
 
 let image = document.querySelector("img");
-image.setAttribute("src",product.image_url);
+image.setAttribute("src", product.image_url);
 document.querySelector(".img").append(image);
 
 let brnd_name = document.querySelector("h2");

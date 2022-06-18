@@ -7,11 +7,11 @@
 .mainbox{
     margin: 50px 0 0 300px;
     width: 63%;
-    height: 700px;
+    height: 300px;
     /* border: 1px solid yellow; */
     display: flex;
 }
-img{ 
+.img{ 
     height: 600px;
 }
 
@@ -137,6 +137,7 @@ h5{
     justify-content: center;
     align-items: center;
     margin-top: 5px;
+    color: black;
 }
 .details{
     margin-left: 25px;
@@ -185,3 +186,11 @@ h5{
     width: 460px;
     margin: auto;
 }
+#footer{
+    margin-top: 500px;
+    width: 100%;
+}
+.childbox1>div>img{
+    height: 600px;
+}
+

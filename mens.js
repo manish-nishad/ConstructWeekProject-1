@@ -2159,4 +2159,4 @@ function sortProducts() {
 }
 
 let prod_count = mensData.length;
-document.querySelector("h2").textContent = "Men Clothing" + " " + "(" + `${prod_count}` + ")";
+document.querySelector(".count").textContent = "Men Clothing" + " " + "(" + `${prod_count}` + ")";

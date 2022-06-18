@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mens Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+            $('#footer').load('footer.html')
+        })
+        $(function(){
+            $('#navbar').load('navbar.html')
+        })
+    </script>
+    
     <link rel="stylesheet" href="mens.css" />
   </head>
   <body>
+    <div id="navbar"></div>
     <div class="banner">
       <img
         src="https://images.bewakoof.com/uploads/category/desktop/freegift_desktop1440x250-1654857837.gif"
@@ -15,7 +26,7 @@
       />
     </div>
     <div>
-      <h2></h2>
+      <h2 class="count"></h2>
     </div>
     <div class="filterhead">FILTERS</div>
     <div class="content">
@@ -267,6 +278,7 @@
       </div>
       <div class="products"></div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
 <script src="mens.js"></script>

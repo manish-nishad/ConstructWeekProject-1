@@ -6,6 +6,7 @@
 }
 .banner > img {
   width: 100%;
+  margin-top: 35px;
   margin-bottom: 50px;
 }
 h2 {
@@ -68,4 +69,8 @@ h2 {
 }
 .productbox > h3 {
   display: inline-block;
+}
+.count{
+  color: black;
+  
 }
