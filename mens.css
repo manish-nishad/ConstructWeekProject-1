@@ -97,7 +97,7 @@ h2 {
 } */
 
 /* for medium screens */
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .count{
     margin-top: -250px;
     /* margin-left: 150px; */
@@ -129,7 +129,7 @@ h2 {
     visibility: hidden;
   }
 }
-
+/* for small screens */
 @media all and (min-width: 340px) and (max-width: 767px) {
   #navbar{
     visibility: hidden;

@@ -211,3 +211,57 @@ h5 {
     position: fixed;
     margin-top: -50px;
 } */
+
+/* for medium screens */
+@media all and (min-width:768px) and (max-width:1023px){
+  #navbar{
+    visibility: hidden;
+  }
+  
+  .mainbox{
+    margin-top: -100px;
+    margin-left: 0px;
+    display: block;
+  }
+  .features{
+    margin-top: 20px;
+    font-size: xx-small;
+  }
+  #footer{
+    margin-top: 900px;
+  }
+  .type{
+    font-size: xx-small;
+  }
+  .members{
+    font-size: xx-small;
+  }
+  .sizelist>div>p{
+    font-size: xx-small;
+  }
+  .cart{
+    font-size: xx-small;
+    position: sticky;
+    
+  }
+  .details{
+    font-size: xx-small;
+  }
+}
+/* for small screens */
+@media all and (min-width:340px) and (max-width:767px) {
+  #navbar{
+    visibility: hidden;
+  }
+  .mainbox{
+    margin-top: -90px;
+    display: block;  
+    font-size: xx-small;
+  }
+  #footer{
+    visibility: hidden;
+  }
+  .sizelist>div:nth-child(3){
+    margin-left: -310px;
+  }
+}
