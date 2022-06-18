@@ -79,7 +79,7 @@ h2 {
   margin-top: 15px;
   gap: 25px;
   cursor: pointer;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
 }
 .pricetext{
   color: black;
@@ -90,3 +90,8 @@ h2 {
   position: fixed;
   margin-top: -15px;
 }
+/* .path>div{
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+} */
