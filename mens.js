@@ -2143,16 +2143,16 @@ function sortProducts() {
     }
     if (selected == "Price : High to Low") {
         mensData.sort(function (a, b) {
-            if (a.price > b.price) return 1
-            if (a.price < b.price) return -1
+            if (a.price > b.price) return -1
+            if (a.price < b.price) return 1
             return 0
         })
         displayProd(mensData);
     }
     if (selected == "Price : Low to High") {
         mensData.sort(function (a, b) {
-            if (a.price > b.price) return -1
-            if (a.price < b.price) return 1
+            if (a.price > b.price) return 1
+            if (a.price < b.price) return -1
             return 0
         })
         displayProd(mensData);
