@@ -2008,9 +2008,10 @@ function displayProd(mensData) {
         brand_description.style.color = "grey"
         brand_description.style.fontSize = "smaller";
         let price = document.createElement("h3");
+        price.setAttribute("class","pricetext")
         price.textContent = element.price;
-        price.style.fontWeight = "lighter";
-        price.style.fontSize = "medium"
+        // price.style.fontWeight = "lighter";
+        // price.style.fontSize = "medium";
         let striked_off_price = document.createElement("p");
         striked_off_price.textContent = element.striked_off_price;
         striked_off_price.style.textDecoration = "line-through"
@@ -2160,3 +2161,4 @@ function sortProducts() {
 
 let prod_count = mensData.length;
 document.querySelector(".count").textContent = "Men Clothing" + " " + "(" + `${prod_count}` + ")";
+

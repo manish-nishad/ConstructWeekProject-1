@@ -6,7 +6,7 @@
 }
 .banner > img {
   width: 100%;
-  margin-top: 35px;
+  margin-top: 15px;
   margin-bottom: 50px;
 }
 h2 {
@@ -58,6 +58,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  cursor: pointer;
 }
 .productbox {
   /* border: 1px solid greenyellow; */
@@ -67,10 +68,25 @@ h2 {
   width: 100%;
   height: 350px;
 }
-.productbox > h3 {
-  display: inline-block;
-}
-.count{
+.count {
   color: black;
-  
+}
+.path {
+  margin-left: 150px;
+  font-size: small;
+  display: flex;
+  color: grey;
+  margin-top: 15px;
+  gap: 25px;
+  cursor: pointer;
+  margin-bottom: 80px;
+}
+.pricetext{
+  color: black;
+  font-size: medium;
+  font-weight: lighter;
+}
+#navbar{
+  position: fixed;
+  margin-top: -15px;
 }
