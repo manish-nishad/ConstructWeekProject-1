@@ -90,8 +90,73 @@ h2 {
   position: fixed;
   margin-top: -15px;
 }
-/* .path>div{
+/* /.path>div{
   width: auto;
   height: auto;
   border: 1px solid black;
 } */
+
+/* for medium screens */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .count{
+    margin-top: -250px;
+    /* margin-left: 150px; */
+    font-size: smaller;
+  }
+  #navbar{
+    visibility: hidden;
+    margin-bottom: 50px;
+  }
+  .products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 250px;
+    
+  }
+  .content{
+    /* margin-top: -250px; */
+    margin-left: -450px;
+    
+  }
+  .banner{
+    visibility: hidden;
+  }
+  .productbox{
+    width: 170px;
+    
+  }
+  .filterhead{
+    visibility: hidden;
+  }
+}
+
+@media all and (min-width: 340px) and (max-width: 767px) {
+  #navbar{
+    visibility: hidden;
+  }
+  .filterhead{
+    visibility: hidden;
+  }
+  .banner{
+    content: none;
+    visibility: hidden;
+  }
+  .filters{
+    visibility: hidden;
+  }
+  .count{
+    font-size: medium;
+  }
+  .products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 400px;
+  }
+  .productbox{
+    width: 200px;
+  }
+  .content{
+    margin-left: -450px;
+    width: 600px;
+  }
+}
