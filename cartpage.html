@@ -8,471 +8,588 @@
     <title>Cart</title>
     <link rel="stylesheet" href="./style/wishlistcart.css">
     <style>
-       body {
-    font-family: "montserrat", sans-serif;
-}
-* {
-    margin: 0;
-    padding: 0;
-}
-.truckmove {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    animation: mymove 120s;
-}
-@keyframes mymove {
-    from {
-        left: 0px;
-    }
-    to {
-        left: 167%;
-    }
-}
-#cart-head-const {
-    /* border: 1px solid red; */
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    font-family: sans-serif;
-    justify-content: space-between;
-}
-#cart-head-const>span {
-    margin-right: 10%;
-}
-#cart-head-const>span>p {
-    font-size: 15px;
-    color: grey;
-}
-#cart-head-const img {
-    margin-left: 200px;
-}
-#cart-shown-images {
-    height: auto;
-    width: 75%;
-    margin: 40px auto;
-    display: flex;
-}
-#total-items-cart {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    margin-left: 200px;
-    margin-top: 40px;
-}
-#cart-shown-images>div {
-    margin: 10px;
-}
-#cart-shown-left {
-    flex: 3;
-}
-#cart-shown-right {
-    flex: 2;
-}
-.offer-div {
-    /* border: 1px solid red; */
-    height: 50px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-#left-offer-color {
-    background-color: lightyellow;
-}
-#offer-div {
-    /* border: 1px solid red; */
-    width:115%;
-    background-color: #fdd835;
-    cursor: pointer;
-    border-radius: 5px;
-    justify-content: space-between;
-    padding: 0 18px 0 15px;
-    margin-bottom: 15px;
-    display: flex;
-}
-.referal-redeem {
-    display: grid;
-    align-items: center;
-    margin-top: 10px;
-    height: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-.referal-redeem>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-}
-.referal-redeem>div {
-    height: 30px;
-    background-color: #ecf6f5;
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    /* border: 1px solid red; */
-    font-family: montserrat,sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    color: #42a2a2;
-}
-#price-summary {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0px;
-    border-bottom: none;
-}
-#price-summary p {
-    margin: 8px;
-    margin-left: 12px;
-    margin-right: 12px;
-}
-#Total-amount-address {
-    display: flex;
-    border: 1px solid grey;
-    height: 60px;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
-    align-items: center;
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
-}
-#cont-price-summ {
-    height: 30px;
-    background-color:  #f5f5f5;
-    margin-bottom: 0px;
-    /* border: 1px solid red; */
-}
-#saving-div {
-    /* padding-right: 10px; */
-    /* border: 1px solid red; */
-    border-radius: 50px;
-    background-color: #e8f3e5;
-    height: 30px;
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color:  #3e8a1f;
-}
-#adress-payment-btn {
-    background-color: teal;
-    color: white;
-    height: 50px;
-    width: 300px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-#grey-border {
-    border: 1px solid  #cccccc;
-    width:118%;
-    height: 40px;
-    margin-left: 0px;
-    border-radius: 5px;
-    padding: 10px;
-    color: #414141;
-    margin-top: -10px;
-}
-#cart-push-prdt {
-    height: 230px;
-    border-radius: 3px;
-    padding: 20px;
-    border: 1px solid gray;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-#cart-push-prdt hr {
-    margin-top: 30px;
-    border: 0.01px solid rgb(220, 228, 236);
-}
+        body {
+            font-family: "montserrat", sans-serif;
+        }
 
-#cart-push-prdt #cart-img {
-    height: 100%;
-    width: 30%;
-    display: flex;
-    justify-content: flex-end;
-}
-#cart-push-prdt #cart-img img {
-    height: 80%;
-    margin-top: 15px;
-    border-radius: 5px;
-}
-#cart-descr-img {
-    display: flex;
-    height: 70%;
-}
-#cart-descr-img>div {
-    flex: 1;
-    height: 100%;
-    width: 50%;
-}
-#remove-wishlist {
-    display: flex;
-    align-items: center;
-    height: 30%;
-    padding-left: 80px;
-}
-#remove-wishlist>div {
-    flex: 1;
-    align-items: center;
-}
-#size-qty {
-    display: flex;
-}
-#size-qty>div {
-    width: 70px;
-    height: 30px;
-    margin: 30px;
-}
-#size-qty>div select {
-    width: 70px;
-    height: 30px;
-    border-radius: 4px;
-}
-#cart-descr p {
-    margin: 10px;
-}
-.green-color {
-    color: green;
-}
-#cart-shown-left {
-   height: auto;
-}
-#payment_secure {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-#payment_secure img {
-    margin: auto;
-    width: 250px;
-}
-#cart-append-change {
-   height: auto;
-}
-#cart-dom-clear {
-    height: auto;
-    margin-bottom: 30px;
-}
-#border-grey {
-    width:125%;
-    border: 1px solid rgba(0, 0, 0, .2);
-}
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visbility 0s opacity 0.5s;
-    /* border: 1px solid red; */
-}
-.bg-active {
-    visibility: visible;
-    opacity: 1;
-}
-.overlay-content {
-    position: relative;
-    background-color: white;
-    width: 25%;
-    height: 40%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 50px 40px;
-    box-sizing: border-box;
+        * {
+            margin: 0;
+            padding: 0;
 
-}
-.overlay-content input {
-    border: none;
-    border-bottom: 3px solid teal;
-    outline: none;
-    padding: 20px 0;
-}
-.overlay-content button {
-    height: 50px;
-    background-color: teal;
-    color: white;
-    border: none;
-}
-.coupoun-close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
-#actual-price {
-    font-weight: bold;
-    font-size: 20px;
-}
-#mrp-price {
-    margin-left: 10px;
-    color: gray;
-    text-decoration: line-through;
-    font-size: 15px;
-    font-weight: normal;
-}
-.total-adress-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: visbility 0s opacity 0.5s;
-}
-.adress-overlay {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-    padding: 1% 2%;
-    box-sizing: border-box;
-    background-color: white;
-    flex-direction: column;
-}
-.address-active {
-    visibility: visible;
-    opacity: 1;
-}
-.adress-overlay input {
-    margin: auto;
-    width: 90%;
-    height: 5%;
-    padding: 1%;
-}
-.Save-address-flex {
-    width: 50%;
-    margin-left: 4%;
-}
-.Save-address-flex p {
-    color: gray;
-    font-size: 15px;
-    margin-bottom: 4px;
-}
-.Save-address-flex button {
-    width: 20%;
-    padding: 7px 3px;
-    /* border: 1px solid  red ; */
-    border-radius: 50px;
-    margin: 2px 2px;
-    background-color: white;
-    color: gray;
-}
-.saveaddress-cancel {
-    width: 80%;
-    margin: auto;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-.saveaddress-cancel button:nth-child(1) {
-    width: 49%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: teal;
-    color: white;
-    border: none;
-}
-.saveaddress-cancel button:nth-child(2) {
-    width: 49%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: white;
-    color: gray;
-    border: 1px solid teal;
-}
-#city-district {
-    width: 94%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    /* border: 1px solid red; */
-}
-#city-district>input {
-    height: 40px;
-    width: 45%;
-    border-radius: 5px;
-    border: 1px solid gray;
-}
-#adress-close {
-    /* border:1px solid red */
-    height: 30px;
-    width: 30px;
-    font-size: 30px;
-    color: gray;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-}
-#prime{
-    color: black;
-    background-color: #979696;
-    font-size: 11px;
-    font-family: montserrat-bold,sans-serif;
-    color: #000;
-    text-transform: uppercase;
-}
+        }
+
+        .truckmove {
+            width: 100px;
+            height: 100px;
+
+            position: relative;
+            animation: mymove 9s;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 167%;
+            }
+
+        }
+
+        #cart-head-const {
+            border: 1px solid gray;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-family: sans-serif;
+            justify-content: space-between;
+            
+        }
+        #cart-head-const>span{
+            margin-right: 10%;
+        }
+        #cart-head-const>span>p{
+            font-size: 15px;
+            color:grey;
+            
+        }
+
+        #cart-head-const img {
+
+            margin-left: 200px;
 
 
-/* nav bar css */
+        }
+
+        #cart-shown-images {
+
+            height: auto;
+
+            width: 75%;
+            margin: 40px auto;
+            display: flex;
 
 
-#nav_bar_search {
-    /* border: 1px solid red; */
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid gray;
-}
-#logo_menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-#logo_menu>li {
-    list-style-type: none;
-    margin: 15px 20px;
-}
-#logo_menu>li>a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
-#logo_menu>li>a>img {
-    width: 150px;
-    margin-right: 900px;
-    margin-left:50px ;
-}
+        }
+
+        #total-items-cart {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 16px;
+
+
+            margin-left: 200px;
+            margin-top: 40px;
+        }
+
+        #cart-shown-images>div {
+
+            margin: 10px;
+
+
+
+
+
+        }
+
+        #cart-shown-left {
+            flex: 3;
+        }
+
+        #cart-shown-right {
+            flex: 2;
+
+        }
+
+        .offer-div {
+
+            height: 50px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+
+        }
+
+        #left-offer-color {
+            background-color: lightyellow;
+        }
+
+        #offer-div {
+            background-color: orange;
+            border-radius: 5px;
+        }
+
+
+        .referal-redeem {
+
+
+            display: grid;
+            align-items: center;
+            margin-top: 10px;
+
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+        }
+
+
+        .referal-redeem>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            height: 40px;
+
+        }
+
+        .referal-redeem>div {
+
+            height: 30px;
+            background-color: paleturquoise;
+            border-radius: 3px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        #price-summary {
+
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0px;
+            border-bottom: none;
+
+
+        }
+
+        #price-summary p {
+            margin: 8px;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+
+        #Total-amount-address {
+            display: flex;
+            border: 1px solid grey;
+            height: 60px;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+            align-items: center;
+            border-bottom: none;
+            border-right: none;
+            border-left: none;
+
+        }
+
+        #cont-price-summ {
+            height: 30px;
+            background-color: lightgray;
+            margin-bottom: 0px;
+
+        }
+
+        #saving-div {
+            border: 1px solid grey;
+            border-radius: 50px;
+            background-color: lightgrey;
+            height: 30px;
+
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #adress-payment-btn {
+
+
+            background-color: teal;
+            color: white;
+            height: 50px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #grey-border {
+            border: 1px solid grey;
+            height: 40px;
+            margin-left: 0px;
+
+
+        }
+
+        #cart-push-prdt {
+
+            height: 230px;
+            border-radius: 3px;
+            padding: 20px;
+            border: 1px solid gray;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        #cart-push-prdt hr {
+
+            margin-top: 30px;
+            border: 0.01px solid rgb(220, 228, 236);
+        }
+
+        #cart-push-prdt #cart-img {
+            height: 100%;
+            width: 30%;
+            display: flex;
+
+            justify-content: flex-end;
+        }
+
+        #cart-push-prdt #cart-img img {
+            height: 80%;
+            margin-top: 15px;
+            border-radius: 5px;
+
+        }
+
+        #cart-descr-img {
+            display: flex;
+
+            height: 70%;
+
+
+
+        }
+
+        #cart-descr-img>div {
+
+
+            flex: 1;
+            height: 100%;
+            width: 50%;
+        }
+
+        #remove-wishlist {
+            display: flex;
+            align-items: center;
+
+            height: 30%;
+            padding-left: 80px;
+
+
+        }
+
+        #remove-wishlist>div {
+
+            flex: 1;
+            align-items: center;
+        }
+
+        #size-qty {
+            display: flex;
+
+
+
+        }
+
+        #size-qty>div {
+            width: 70px;
+            height: 30px;
+            margin: 30px;
+
+
+        }
+
+        #size-qty>div select {
+            width: 70px;
+            height: 30px;
+            border-radius: 4px;
+
+
+        }
+
+        #cart-descr p {
+            margin: 10px;
+        }
+
+        .green-color {
+            color: green;
+        }
+
+        #cart-shown-left {
+
+            height: auto;
+        }
+
+        #payment_secure {
+            margin: auto;
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        #payment_secure img {
+            margin: auto;
+
+            width: 250px;
+
+        }
+
+        #cart-append-change {
+
+            height: auto;
+        }
+
+        #cart-dom-clear {
+
+            height: auto;
+            margin-bottom: 30px;
+
+        }
+
+        #border-grey {
+            border: 1px solid gray;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visbility 0s opacity 0.5s;
+        }
+
+        .bg-active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .overlay-content {
+            position: relative;
+            background-color: white;
+            width: 25%;
+            height: 40%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 50px 40px;
+            box-sizing: border-box;
+
+        }
+
+        .overlay-content input {
+
+            border: none;
+            border-bottom: 3px solid teal;
+            outline: none;
+            padding: 20px 0;
+        }
+
+        .overlay-content button {
+            height: 50px;
+            background-color: teal;
+            color: white;
+            border: none;
+
+
+        }
+
+        .coupoun-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+
+
+        #actual-price {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #mrp-price {
+            margin-left: 10px;
+            color: gray;
+            text-decoration: line-through;
+            font-size: 15px;
+            font-weight: normal;
+
+        }
+
+        .total-adress-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visbility 0s opacity 0.5s;
+
+
+
+
+        }
+
+        .adress-overlay {
+
+
+
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            margin: auto;
+
+            padding: 1% 2%;
+            box-sizing: border-box;
+            background-color: white;
+            flex-direction: column;
+
+
+
+
+        }
+
+        .address-active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .adress-overlay input {
+
+            margin: auto;
+            width: 90%;
+            height: 5%;
+            padding: 1%;
+
+
+        }
+
+        .Save-address-flex {
+            width: 50%;
+
+            margin-left: 4%;
+
+
+        }
+
+        .Save-address-flex p {
+            color: gray;
+            font-size: 15px;
+            margin-bottom: 4px;
+
+        }
+
+        .Save-address-flex button {
+
+            width: 20%;
+            padding: 7px 3px;
+            border: 1px solid gray;
+            border-radius: 50px;
+            margin: 2px 2px;
+            background-color: white;
+            color: gray;
+
+        }
+
+        .saveaddress-cancel {
+
+            width: 80%;
+            margin: auto;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+
+        .saveaddress-cancel button:nth-child(1) {
+
+            width: 49%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: teal;
+            color: white;
+            border: none;
+
+        }
+
+        .saveaddress-cancel button:nth-child(2) {
+
+            width: 49%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: white;
+            color: gray;
+            border: 1px solid teal;
+
+        }
+
+        #city-district {
+            width: 94%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+
+
+        }
+
+        #city-district>input {
+            height: 40px;
+            width: 45%;
+            border-radius: 5px;
+            border: 1px solid gray;
+
+
+
+
+        }
+
+        #adress-close {
+
+            height: 30px;
+            width: 30px;
+            font-size: 30px;
+            color: gray;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+
+
+        }
     </style>
 </head>
 
 <body>
+
 
     <div class="overlay">
         <div class="overlay-content">
@@ -520,10 +637,14 @@
     </div>
     <!-- </form> -->
 
+
+
+
+
     <div id="cartpage-total-div">
 
         <div id="cart-head-const">
-            <a href="./index.html"><img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg" height="25px"></a> 
+            <a href="./index.html"><img src="https://images.bewakoof.com/web/bewakoof-primary-logo-white-bg-2x-1635745564.png" height="25px"></a> 
             <span>Signed as:<p id="logedin-email"></p></span>
         </div>
 
@@ -675,6 +796,8 @@
                         </div>
                     </div>
                 </div>
+
+
 
             </div>
             <div id="payment_secure">
@@ -929,6 +1052,16 @@ var subTotalPrice = Math.floor(Number(n.price) - (Number(n.discount)/100)*n.pric
 
         })
 
+
+
+        // var total_price = array.reduce(function (a, b) {
+        //     return { subTotalPrice: a.subTotalPrice + b.subTotalPrice };
+        // })
+        // console.log("total", total_price)
+
+        // var total_price = array.reduce(function (a, b) {
+        //     return { price: a.price + b.price };
+        // })
         // console.log(total_price);
 array.map((el)=>{
 var subTotalPrice = Math.floor(Number(el.price) - (Number(el.discount)/100)*el.price);
@@ -964,6 +1097,7 @@ console.log(total_price, 5541)
         localStorage.setItem("order_summary_data", JSON.stringify(price_summary))
 
         document.querySelector(".total_calculate_price").textContent = "₹" + total_price;
+        // total_calculate_price = total_price.subTotalPrice;
 
         document.querySelector(".Subtotal").textContent = "₹" + (sub_total_price);
         document.querySelector(".Grand-total-pay").textContent = "₹" + (sub_total_price);
@@ -984,6 +1118,10 @@ console.log(total_price, 5541)
     }
 
 
+
+
+
+
     document.querySelector("#coupoun-submit").addEventListener("click", coupountoogless)
 
 var flag = false;
@@ -997,7 +1135,20 @@ localStorage.setItem("flag", JSON.stringify(flag));
 
             flag = true;
             localStorage.setItem("flag", JSON.stringify(flag));
-   
+        //     price_summary = {
+        //     price: sub_total_price,
+        //     bag_discount: bag_discounted_amount,
+        //     total: total_price,
+        // }
+
+
+
+        // <div>
+        //                             <p class="total_calculate_price">null</p>
+        //                             <p>FREE</p>
+        //                             <p class="bag-discount">0</p>
+        //                             <p class="Subtotal"></p>
+        //                         </div>
 
             document.querySelector(".bag-discount").textContent ="₹ "+ (bag_discounted_amount + 100);
             document.querySelector(".Subtotal").textContent = "₹" + (total_price-bag_discounted_amount-100);
@@ -1016,6 +1167,16 @@ localStorage.setItem("flag", JSON.stringify(flag));
     }
 
     console.log(saved_amount_array)
+    // var bag_discounted_amount = saved_amount_array.reduce((m, n) => {
+    //     return m + n;
+    // })
+
+    // document.querySelector(".bag-discount").textContent = "₹" + bag_discounted_amount;
+    // console.log(bag_discounted_amount)
+
+
+
+
 
 
     document.querySelector("#adress-payment-btn").addEventListener("click", address_visible)
@@ -1030,6 +1191,8 @@ localStorage.setItem("flag", JSON.stringify(flag));
     document.querySelector("#adress-close").addEventListener("click", function () {
         document.querySelector(".total-adress-page").classList.toggle("address-active")
     })
+
+
 
     // wishlist script
 
@@ -1079,6 +1242,28 @@ localStorage.setItem("flag", JSON.stringify(flag));
     ]
 
 
+// //  {
+//     desc: "Jet Black Round Neck 3/4th Sleeve T-Shirt",
+//             subTotalPrice: 999,
+//             price: 1999,
+//             image: "https://images.bewakoof.com/t320/know-your-power-boyfriend-t-shirt-464873-1642404499-1.jpg",
+//         }
+
+
+// {
+//     "id": "HST8",
+//     "name": "Gotham City Half Sleeve T-shirt",
+//     "price": "799",
+//     "image1": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536986-1.jpg",
+//     "image2": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536989-2.jpg",
+//     "image3": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536993-3.jpg",
+//     "image4": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536986-1.jpg",
+//     "image5": "https://images.bewakoof.com/t540/gotham-city-half-sleeve-t-shirt-463719-1641536989-2.jpg",
+//     "desc": "Regular fit - Fits just right - not too tight, not too loose.Single Jersey, 100% Cotton Classic, lightweight jersey fabric comprising 100% cotton.",
+//     "tribe": " ₹50",
+//     "discount": "50"
+// }
+
 
     // localStorage.setItem("bewkoof_wishlist", JSON.stringify(obj));
 
@@ -1097,7 +1282,16 @@ localStorage.setItem("flag", JSON.stringify(flag));
             var wishlistProduct = document.createElement("div");
             wishlistProduct.id = "wishlist-product";
             var subTotalPrice =  Math.floor(Number(elem.price) - (Number(elem.discount)/100)*elem.price);
-           
+            // wishlistProduct.innerHTML=`
+
+            //         <img src=${elem.image1} alt="">
+            //         <p id="name">${elem.desc}</p>
+            //         <p id="wishlist-price">₹${elem.subTotalPrice}<span>₹999</span><span>67% OFF</span></p>
+            //         <p id="wishlist-tribe">₹299 For Tribe Members</p>
+            //         <button>MOVE TO BAG</button>
+            //         <span class="wishlist-prod-close">&times;</span>
+
+            // `;
 
             var img = document.createElement("img");
             var p1 = document.createElement("p");
@@ -1139,10 +1333,47 @@ localStorage.setItem("flag", JSON.stringify(flag));
     };
 
 
+    // document.querySelector("#btn-address-save").addEventListener("click", function () {
 
+    //     //     address-fullname
+    //     // address-mobilenumber
+    //     // address-pincode
+    //     // address-city-district
+    //     // address-state
+    //     // address-flatno
+    //     // address-area
+    //     // address-landmark
+
+    //     var obj = [{
+    //         fullname: document.querySelector(".address-fullname").value,
+    //         mobilenumber: document.querySelector(".address-mobilenumber").value,
+    //         pincode: document.querySelector(".address-pincode").value,
+    //         city_district: document.querySelector(".address-city-district").value,
+    //         state: document.querySelector(".address-state").value,
+    //         flatno: document.querySelector(".address-flatno").value,
+    //         area: document.querySelector(".address-area").value,
+    //         landmark: document.querySelector(".address-landmark").value,
+
+
+    //     }];
+
+
+    //     localStorage.setItem("myaddress_data", JSON.stringify(obj))
+    //     console.log(obj)
+    //     window.location.href = "ordersummary.html"
+
+
+    // })
 
     document.querySelector("#btn-address-save").addEventListener("click", function () {
-     
+        //     address-fullname
+        // address-mobilenumber
+        // address-pincode
+        // address-city-district
+        // address-state
+        // address-flatno
+        // address-area
+        // address-landmark
         var obj = [{
             fullname: document.querySelector(".address-fullname").value,
             mobilenumber: document.querySelector(".address-mobilenumber").value,
@@ -1178,3 +1409,16 @@ localStorage.setItem("flag", JSON.stringify(flag));
         document.getElementById("logedin-email").textContent = email;
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- // we have to modify tribe value line- 796 -->
