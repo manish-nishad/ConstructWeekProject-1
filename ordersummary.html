@@ -52,13 +52,7 @@
         }
 
         #summary-shown-details>div {
-
             margin: 10px;
-
-
-
-
-
         }
 
         #summary-shown-left {
@@ -245,9 +239,10 @@
 </head>
 
 <body>
+   
     <div id="total-order-summary-page">
         <div id="summary-head-const">
-            <img src="https://images.bewakoof.com/web/bewakoof-primary-logo-white-bg-2x-1635745564.png" height="25px">
+            <img src="https://images.bewakoof.com/web/ic-desktop-pride-bwkf-logo.svg" height="25px">
         </div>
         <p id="summary-items">Order Summary</p>
         <div id="summary-shown-details">
@@ -415,19 +410,6 @@ if(flag == true){
     document.querySelector(".Subtotal").textContent = "₹ "+ price;
     document.querySelector(".Grand-total-pay").textContent = "₹ "+ price;
     document.getElementById("saving-div").innerText = `You are saving ₹ ${bag_discount} on this order`;
-
-
-    // total_calculate_price
-    //                 bag-discount
-    //                 Subtotal
-    // Grand-total-pay
-
-
-    // price_summary = {
-    //         price: sub_total_price,
-    //         bag_discount: bag_discounted_amount,
-    //         total: total_price,
-    //     }
 
 
 document.getElementById("adress-payment-btn").addEventListener("click",function(){
