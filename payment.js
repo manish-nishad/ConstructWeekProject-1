@@ -149,15 +149,19 @@ document.getElementById("card-pay-now-button").addEventListener("click", functio
     var person = prompt("Please enter your OTP", "");
     if (person == "1234") {
         alert("We are processing your payment !");
-        window.location.href = "./paymentsuccesspage.html";
+        window.location.href = "paymentsuccess.html";
     }
     else {
         alert("Wrong OTP, Try Again");
     }
+    
+});
+document.getElementById("paynow-button").addEventListener("click", function () {
+    window.location.href = "paymentsuccess.html";
 });
 
-
-
-
+document.getElementById("verify-button").addEventListener("click", function () {
+    window.location.href = "paymentsuccess.html";
+});
 
 

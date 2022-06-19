@@ -34,13 +34,13 @@ body{
 #payment-mode{
     border: 1px solid #eee;
     display: flex;
-    width: 50%;
+    width: 60%;
     margin-left: 8%; 
     border-radius: 2px;
     height: 500px;
 }
 #left-payment-mode{
-    width: 50%;
+    width: 40%;
     background-color: whitesmoke;
 }
 #left-payment-mode>button{
@@ -121,6 +121,9 @@ align-items: center;
 #card-payment-para1{
    font-size: 15px;
    color: grey;
+  padding: 0px 10px;
+  text-align: left;
+  margin-left: 10px;
 }
 #payment-debit>p{
     padding: 0 10px;
@@ -138,7 +141,7 @@ align-items: center;
     margin-bottom: 10px;
 }
 #card-checkbox{
-    width: 20px;
+    width: 30px;
     margin-left: 10px;
 }
 #upi{
@@ -147,11 +150,12 @@ align-items: center;
 }
 #payment-wallet{
     display: none;
+    width: 100%;
 }
 #payment-wallet>div{
     display: flex;
-    border: 2px solid #eee;
-    width: 90%;
+    border-bottom: 2px solid #eee;
+    width: 120%;
     margin: auto;
     align-items: center;
     margin-bottom: 20px;
@@ -169,6 +173,7 @@ width: 280px;
     height: 20px;
     margin-top: 10px;
     margin-left: 20%;
+    margin-right: 5px;
 }
 
 #payment-net-banking{
@@ -176,8 +181,8 @@ width: 280px;
 }
 #payment-net-banking>div{
     display: flex;
-    border: 2px solid #eee;
-    width: 90%;
+    border-bottom: 2px solid #eee;
+    width: 120%;
     margin: auto;
     align-items: center;
     margin-bottom: 20px;
@@ -196,26 +201,28 @@ width: 280px;
     margin-top: 10px;
     margin-left: 20%;
 }
-#payment-net-other-arrow{
+/* #payment-net-other-arrow{
     border-radius: 50%;
     height: 20px;
     margin-left: 50%;
     background-color: transparent;
     border: 0;
     transform: rotate(225deg);
-}
+ } */
+
 #payment-net-banking>p{
     font-size: 18px;
     color: gray;
-    padding: 0 20px;
+    padding: 0px 20px;
     text-align: right;
 }
 #payment-upi{
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
     border-radius: 5px;
     margin: 10px;
     text-align: center;
     display: none;
+    width: 110%;
 }
 #payment-upi>div{
     display: flex;
@@ -231,7 +238,11 @@ width: 280px;
     margin-right: 5%;
 }
 #upi{
-    margin-left: 5%;
+    font-size: 15px;
+   color: grey;
+  padding: 0px 10px;
+  text-align: left;
+  margin-left: 5px;
 }
 
 #payment-upi>div:nth-child(1)>p:nth-child(2){
@@ -257,7 +268,7 @@ width: 280px;
    margin-left: 20%;
    border: 1px solid green;
 }
-#payment-upi>button{
+#verify-button{
     width: 90%;
     padding: 15px 20px;
     background-color: teal;
@@ -297,7 +308,7 @@ width: 280px;
     margin-left: 20px;
     color: grey;
 }
-#payment-cod>button{
+#paynow-button{
     width: 90%;
     padding: 15px 20px;
     background-color: teal;
@@ -354,4 +365,13 @@ width: 280px;
     color: grey;
     text-align: left;
     margin-left: 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 499px){
+
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 1079px){
+
 }
